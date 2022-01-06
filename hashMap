@@ -1,0 +1,100 @@
+#include <iostream>
+#include<unordered_map>
+using namespace std;
+
+int main() {
+	// your code goes here
+	unordered_map<string,int>ourMap;
+	//insert
+	pair<string,int> ("abc",1);
+	ourmap.insert(p);
+    ourMap["def"] = 2;
+    
+    //find or access element
+    
+    cout<<ourMap["abc"]<<endl;
+    cout<<ourMap.at("abc")<<endl;
+    cout<<"Size:"<<ourMap.size()<<endl;
+    // cout<<ourMap.at("ghi")<<endl;
+    cout<<ourMap["ghi"]<<endl;
+    cout<<"Size:"<<ourMap.size()<<endl;
+    
+    // check presence
+    if(ourMap.count("ghi")>0) {
+     cout<<"ghi is present"<<endl;   
+    }
+	//delete
+	//search
+	
+	
+	return 0;
+}
+
+-----------REMOVE DUPLICATE FROM ARRAY OF INTEGERS-----------
+
+#include<iostream>
+#include<unordered_map>
+#include<vector>
+using namespace std;
+
+
+    vector<int> removeDuplicates(int* a, int size){
+        vector<int> output;
+        unordered_map<int,bool>seen;
+        for(int i=0;i<size;i++) {
+            if(seen.count[a[i]] > 0) {
+                continue;
+            }
+            seen[a[i]]= true;
+            output.push_back(a[i]);
+        }
+        return output;
+    }
+    
+int main() {
+    int a[]= {1,5,7,4,262,69,3,4,47,6,3,2};
+    vector<int>output = removeDuplicates(a,12);
+    for(int i=0;i<ouput.size();i++) {
+        cout<<output.a[i]<<endl;
+    }
+}
+
+
+----------------------ITERATORS------------------------
+#include<vector>
+#include<iostream>
+#include<unordered_map>
+using namespace std;
+int main() {
+    unordered_map<string,int>ourMap;
+    ourMap["abc"]=1;
+    ourMap["def"]=2;
+    ourMap["ghi"]=3;
+    ourMap["jkl"]=4;
+    ourMap["mno"]=5;
+    ourMap["pqr"]=6;
+    unordered_map<string,int>::iterator it= ourMap.begin();
+    while(it!=ourMap.end()) {
+        cout<<"Key:"<<it->first<<"Value:"<<it->second<<endl;
+        it++;
+    }
+    //find
+    unordered_map<string,int>iterator it2 = ourMap.find("abc");
+    ourMap.erase(it2,it2+5);
+    
+    
+    
+    
+    vector<int>v;
+    v.push_back(1);
+    v.push_back(2);
+    v.push_back(3);
+    v.push_back(4);
+    v.push_back(5);
+    
+    vector<int>::iterator it1 =v.begin();
+    while(it1!=v.end()) {
+        cout<<*it1<<endl;
+        it1++;
+    }
+}
